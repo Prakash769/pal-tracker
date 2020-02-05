@@ -13,12 +13,15 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 11
+<<<<<<< HEAD
     - name: Startup test database instance
       run: sudo service mysql start
     - name: Create test database
       run: |
         mysql -uroot -proot < databases/tracker/create_databases.sql
         ./gradlew testMigrate
+=======
+>>>>>>> cd05e68... Add deployment pipeline
     - name: Build with Gradle
       run: ./gradlew build
     - name: Publish artifact
@@ -54,6 +57,7 @@ jobs:
         CF_SPACE: ${{ secrets.CF_SPACE }}
         CF_USERNAME: ${{ secrets.CF_USERNAME }}
         CF_PASSWORD: ${{ secrets.CF_PASSWORD }}
+<<<<<<< HEAD
 
   migrate-database:
     needs: deploy
@@ -77,3 +81,5 @@ jobs:
         CF_SPACE: ${{ secrets.CF_SPACE }}
         CF_USERNAME: ${{ secrets.CF_USERNAME }}
         CF_PASSWORD: ${{ secrets.CF_PASSWORD }}
+=======
+>>>>>>> cd05e68... Add deployment pipeline

@@ -4,9 +4,9 @@ applications:
     path: build/libs/pal-tracker.jar
     #random-route: true
     routes:
-      - route: pal-tracker-prakash-vishwanth.cfapps.io
+      - route: pal-tracker-vishwanth-tummala.cfapps.io
     env:
-      WELCOME_MESSAGE: Hello from the review environment
+      WELCOME_MESSAGE: Hello from the new tummala org pcf environment
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
     services:
       - tracker-database
